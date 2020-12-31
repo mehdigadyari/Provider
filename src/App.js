@@ -1,25 +1,16 @@
-import logo from './logo.svg'
-import './App.css'
-
+import { CssBaseline } from '@material-ui/core'
+import React from 'react'
+import ThemeProvider from './component/ThemeProvider'
+import MasterLayout from './screen/MasterLayout'
+import RTL from './component/RTL'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <RTL>
+        <CssBaseline />
+        <MasterLayout />
+      </RTL>
+    </ThemeProvider>
   )
 }
-
 export default App
